@@ -42,14 +42,14 @@ self.addEventListener("activate", function (evt) {
 //fetch
 self.addEventListener("fetch", function (evt) {
     if (evt.request.url.includes("/api/")) {
-        evt.respondsWith(
+        evt.respondWith(
             caches.open(DATA_CACHE_NAME).then(cache => {
                 return fetch(evt.request)
-                    .then(res => {
-                        if (res.status === 200) {
-                            cache.put(evt.request.url, res.clone());
+                    .then(response => {
+                        if (response.status === 200) {
+                            cache.put(evt.request.url, response.clone());
                         }
-                        return res;
+                        return response;
                     })
                     .catch(err => {
                         return cache.match(evt.request);
