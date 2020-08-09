@@ -19,7 +19,7 @@ td, th {
 }
 
 tr:nth-child(even) {
-  background-color: #dddddd;
+  background-color: #aed9e0;
 }
 
 .error {
@@ -34,7 +34,6 @@ tr:nth-child(even) {
 
 .total {
   font-size: 150%;
-  text-decoration: underline;
 }
 
 .form {
@@ -49,3 +48,14 @@ tr:nth-child(even) {
   width: 90%;
   margin: 0 auto;
 }
+
+#sub-btn {
+  background-color: #f94144;
+  border-color: #f94144;
+}
+
+#add-btn {
+  background-color: #43aa8b;
+  border-color: #43aa8b;
+}
+
