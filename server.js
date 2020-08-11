@@ -12,6 +12,7 @@ app.use(logger("dev"));
 app.use(compression());
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
+app.use(express.static(__dirname + '/node_modules/bootstrap/dist'));
 
 app.use(express.static("public"));
 
